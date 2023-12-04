@@ -8,6 +8,7 @@
 
  .litbox {
    -fx-background-color: #e9da77;
+   -fx-text-fill: #e9da77;
    -fx-border-radius: 4px;
 
  }
