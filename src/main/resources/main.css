@@ -5,3 +5,46 @@
  * JavaFX start() method:
  *   scene.getStylesheets().add("main.css");
  */
+
+ .litbox {
+   -fx-background-color: #e9da77;
+   -fx-border-radius: 4px;
+
+ }
+ .illegalbox {
+    -fx-background-color: #e62415;
+    -fx-border-radius: 4px;
+ }
+
+ .wall{
+     -fx-background-color: #0c0808;
+ }
+ .clue{
+         -fx-text-fill: #ffffff;
+         -fx-background-color: #0c0808;
+         -fx-font-size: 25px;
+         -fx-alignment: center;}
+
+ .donebutt{
+          -fx-text-fill: #ffffff;
+          -fx-background-color: #0b622a;
+          -fx-font-size: 25px;
+          -fx-alignment: center;}
+ }
+
+ .conts {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #263248;
+    -fx-font-size: 40px;
+    -fx-alignment: center;}
+ }
+
+ .ate{
+    -fx-text-fill: #ffffff;
+     -fx-background-color: #0b622a;
+ }
+
+ .failed{
+     -fx-text-fill: #ffffff;
+     -fx-background-color: #e62415;
+ }
