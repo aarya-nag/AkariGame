@@ -11,7 +11,6 @@ import javafx.scene.Scene;
 import com.comp301.a09akari.SamplePuzzles;
 import com.comp301.a09akari.controller.ClassicMvcController;
 
-
 public class AppLauncher extends Application {
   @Override
   public void start(Stage stage) {
@@ -33,21 +32,20 @@ public class AppLauncher extends Application {
 
     Model game = new ModelImpl(library); // give game a library
 
-    ClassicMvcController cont = new ControllerImpl(game); // give controller a game which is a library
+    ClassicMvcController cont =
+        new ControllerImpl(game); // give controller a game which is a library
 
-
-    View view = new View(game,cont);
+    View view = new View(game, cont);
     Scene scene = new Scene(view.render(), 600, 600);
     scene.getStylesheets().add("main.css");
     stage.setScene(scene);
 
-    game.addObserver( (Model g) -> {
-      scene.setRoot(view.render());
-      stage.sizeToScene();
-            });
+    game.addObserver(
+        (Model g) -> {
+          scene.setRoot(view.render());
+          stage.sizeToScene();
+        });
 
     stage.show();
-
-
   }
 }

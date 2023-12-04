@@ -1,6 +1,5 @@
 package com.comp301.a09akari.view;
 
-
 import com.comp301.a09akari.controller.ClassicMvcController;
 import com.comp301.a09akari.model.CellType;
 import com.comp301.a09akari.model.Model;
@@ -13,17 +12,14 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
-
 public class PuzzleView implements FXComponent {
   private final Model game;
   private final ClassicMvcController cont;
-
 
   public PuzzleView(Model game, ClassicMvcController cont) {
     this.game = game;
     this.cont = cont;
   }
-
 
   @Override
   public Parent render() {
@@ -34,16 +30,11 @@ public class PuzzleView implements FXComponent {
     grid.setVgap(5);
     grid.setPadding(new Insets(10, 10, 10, 10));
 
-
     Button box = new Button(" ");
     box.setPrefSize(50, 50);
 
-
-
-
     for (int r = 0; r < curr.getHeight(); r++) {
       for (int c = 0; c < curr.getWidth(); c++) {
-
 
         if (game.getActivePuzzle().getCellType(r, c) == CellType.CORRIDOR) {
           box = new Button(" ");
@@ -59,9 +50,8 @@ public class PuzzleView implements FXComponent {
           if (game.isLamp(r, c)) {
             Image bulbImg = new Image(getClass().getResourceAsStream("light-bulb.png"));
             ImageView bulbImgView = new ImageView(bulbImg);
-            //box.setGraphic(bulbImgView);
+            // box.setGraphic(bulbImgView);
             box.setStyle("-fx-background-color: #e9da77");
-
           }
           if (game.isLamp(r, c) && game.isLampIllegal(r, c)) {
             box.getStyleClass().add("illegalbox");
@@ -71,7 +61,6 @@ public class PuzzleView implements FXComponent {
           box.setPrefSize(50, 50);
           box.getStyleClass().add("wall");
           grid.add(box, r, c);
-
 
         } else if (game.getActivePuzzle().getCellType(r, c) == CellType.CLUE) {
           box = new Button(" ");
@@ -87,4 +76,3 @@ public class PuzzleView implements FXComponent {
     return grid;
   }
 }
-
