@@ -27,7 +27,7 @@ public class MessageView implements FXComponent {
                   + "/"
                   + game.getPuzzleLibrarySize());
       text.getStyleClass().add("ate");
-    } else{
+    } else {
       text = new Label("Welcome to Akari slay. I hope you enjoy :)");
     }
 
